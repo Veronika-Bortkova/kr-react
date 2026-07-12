@@ -9,7 +9,7 @@ type propsType = {
 const PosterPreviewComponent:FC<propsType> = ({poster_path, size}) => {
     return (
         <>
-            <img src={posterUrl+size+poster_path} alt="poster"></img>
+            <img className={"poster"} src={posterUrl+size+poster_path} alt="poster"></img>
         </>
     );
 };

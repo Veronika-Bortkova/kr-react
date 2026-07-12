@@ -6,7 +6,7 @@ const GenresBadgesComponent = () => {
 
     const {genres} = useAppGeners();
     return (
-        <div>
+        <div  className={"bageList"}>
             <ul>
                 {genres.genres.map(genre => <GenreBadgeComponent genre={genre} key={genre.id}/>)}
             </ul>

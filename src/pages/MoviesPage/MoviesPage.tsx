@@ -12,7 +12,7 @@ const MoviesPage = () => {
     return (
         <div className={"moviesPage"}>
             <GenresComponent/>
-             <MoviesListComponent/>
+            <MoviesListComponent/>
         </div>
     );
 };

@@ -4,14 +4,15 @@
     box-sizing: border-box;
 }
 .moviesPage{
-    padding: 10px 50px;
+    padding: 120px 50px 100px 50px;
     display: flex;
     justify-content: start;
     align-items: start;
     gap: 15px;
-
-    overflow: hidden;
     width: 100%;
+}
+.bageList{
+
 }
 .badge{
     width: 120px;
@@ -23,7 +24,6 @@
     justify-content: center;
     font-size: 16px;
     font-weight: bold;
-
 }
 
 .moviesPage > :first-child {
@@ -36,7 +36,7 @@
     width: 1140px;
 }
 
-img{
+.poster{
     object-fit: cover;
     width: 100%;
     height: auto;
@@ -49,7 +49,7 @@ img{
     margin: 0 auto;
     width: 100%;
     justify-content: center;
-    justify-items: center
+    justify-items: center;
 }
 .listCard{
     width: 250px;
@@ -61,7 +61,6 @@ img{
     box-shadow: 3px 3px 5px rgba(7, 7, 7, 0.55);
 }
 .top_partCard{
-    display: flex;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -89,7 +88,7 @@ img{
 }
 h2{
     text-align: center;
-    margin: 0px;
+    margin: 0;
     font-size: 20px;
 }
 .stars{
