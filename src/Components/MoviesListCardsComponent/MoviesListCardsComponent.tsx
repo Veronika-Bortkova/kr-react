@@ -12,7 +12,7 @@ const MoviesListCardsComponent:FC<PropsType> = ({movie}) => {
         <div className={"listCard"}>
             <div className={"top_partCard"}>
 
-                <PosterPreviewComponent poster_path={movie.poster_path} size={"w500"}/>
+                <PosterPreviewComponent poster_path={movie.poster_path} size={"w342"}/>
                 <h2>{movie.title}</h2>
                 <div className={"genreWrapper"}><GenreNameListComponent genres={movie.genre_ids}/></div>
             </div>

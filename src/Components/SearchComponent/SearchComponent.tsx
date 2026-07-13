@@ -2,10 +2,14 @@ import lupa from "../../imeges/lupa7_.png";
 
 const SearchComponent = () => {
     return (
-        <div className={"searchBlock"}>
-            <input type={"search"} name={"search"} placeholder={"Enter movie title..."} ></input>
-            <button><img className={"lupa"} src={lupa}></img></button>
-        </div>
+        <>
+            <form>
+                <div className={"searchBlock"}>
+                    <input type={"search"} name={"search"} placeholder={"Enter movie title..."} ></input>
+                    <button type={"submit"}><img className={"lupa"} src={lupa} alt={"search"}></img></button>
+                </div>
+            </form>
+        </>
     );
 };
 

@@ -59,6 +59,12 @@
     align-items: center;
     border-radius: 10px;
     box-shadow: 3px 3px 5px rgba(7, 7, 7, 0.55);
+    transition: filter 0.1s ease, background 0.3s ease;
+}
+.listCard:hover{
+    filter: brightness(0.5);
+    background: rgba(0, 0, 0, 0.28);
+
 }
 .top_partCard{
     display: flex;
