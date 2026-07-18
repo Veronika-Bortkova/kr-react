@@ -6,7 +6,7 @@ const SearchComponent = () => {
             <form>
                 <div className={"searchBlock"}>
                     <input type={"search"} name={"search"} placeholder={"Enter movie title..."} ></input>
-                    <button type={"submit"}><img className={"lupa"} src={lupa} alt={"search"}></img></button>
+                    <button className={"buttonSearch"} type={"submit"}><img className={"lupa"} src={lupa} alt={"search"}></img></button>
                 </div>
             </form>
         </>

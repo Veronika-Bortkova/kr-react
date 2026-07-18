@@ -54,7 +54,7 @@ input::placeholder{
     height: 18px;
     width: auto;
 }
-button {
+.buttonSearch {
     border-radius: 50px;
     width: 50px;
     height: 50px;
