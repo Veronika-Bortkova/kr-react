@@ -1,0 +1,8 @@
+.pagination-container{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    font-weight: bold;
+    cursor: pointer !important;
+
+}

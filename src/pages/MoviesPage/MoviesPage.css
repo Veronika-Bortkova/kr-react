@@ -105,10 +105,13 @@ h2{
     margin-top: 5px;
 }
 
-.paginationBlock{
+.paginationBlock {
     display: flex;
     justify-content: center;
     align-items: center;
     padding-bottom: 50px;
-    gap: 15px;
+    width: 1140px; /* Делаем ширину точно такой же, как у блока фильмов */
+
+    /* Считаем отступ: 50px (левый паддинг страницы) + 140px (ширина сайдбара с жанрами) + 15px (gap страницы) */
+    margin-left: 205px;
 }
