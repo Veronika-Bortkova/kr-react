@@ -3,11 +3,11 @@ import type {IMoviesObj} from "../models/MovieModel.ts";
 import {token} from "../constants/authorization.ts";
 import type {IGenreObj} from "../models/GenreModel.ts";
 
-export const getAllMovies = async ():Promise<IMoviesObj> =>{
-    return await fetch(baseUrlMovies, {
+export const getAllMovies = async (pg:string):Promise<IMoviesObj> =>{
+    return await fetch(baseUrlMovies + "?page=" + pg, {
         method: 'GET',
         headers: {
-            // Важно: слово Bearer и пробел перед токеном обязательны!
+
             'Authorization': `Bearer ${token}`,
             'accept': 'application/json'
         }

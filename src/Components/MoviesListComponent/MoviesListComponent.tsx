@@ -3,15 +3,18 @@ import {useAppSelector} from "../../redux/hooks/useAppSelector.ts";
 import {useEffect} from "react";
 import {movieActions} from "../../redux/slices/movieSlice.ts";
 import MoviesListCardsComponent from "../MoviesListCardsComponent/MoviesListCardsComponent.tsx";
+import {useSearchParams} from "react-router-dom";
 
 
 
 const MoviesListComponent = () => {
     const dispatch = useAppDispatch();
     const movies = useAppSelector(state => state.movieStoreSlice.moviesObj.results);
+    const [pgMovie] = useSearchParams();
+    const currentPage = pgMovie.get("pg") ||"1";
     useEffect(() => {
-        dispatch(movieActions.loadAllMovies());
-    }, []);
+        dispatch(movieActions.loadAllMovies(currentPage));
+    }, [currentPage]);
     return (
 
         <div className={"GridMovieList"}>

@@ -12,8 +12,8 @@ export const initMoviesSliceState:movieSliceType = {moviesObj:{
         total_results: 0
     }};
 
-const loadAllMovies = createAsyncThunk("loadAllMovies", async (_, thunkAPI) => {
-    const allMoviesObj = await getAllMovies();
+const loadAllMovies = createAsyncThunk("loadAllMovies", async (pg:string, thunkAPI) => {
+    const allMoviesObj = await getAllMovies(pg);
     return thunkAPI.fulfillWithValue(allMoviesObj);
 })
 export const movieSlice = createSlice({

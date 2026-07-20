@@ -20,8 +20,10 @@ const Pagination = () => {
                 const pg = query.get("pg");
                 if (pg) {
                     let currentPage = +pg;
-                    ++currentPage;
-                    setQuery({pg:currentPage.toString()});
+                    if (currentPage<500) {
+                        ++currentPage;
+                        setQuery({pg: currentPage.toString()});
+                    }
                 }
             }}>Next</button>
 
