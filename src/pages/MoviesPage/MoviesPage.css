@@ -110,8 +110,33 @@ h2{
     justify-content: center;
     align-items: center;
     padding-bottom: 50px;
-    width: 1140px; /* Делаем ширину точно такой же, как у блока фильмов */
-
-    /* Считаем отступ: 50px (левый паддинг страницы) + 140px (ширина сайдбара с жанрами) + 15px (gap страницы) */
+    width: 1140px;
     margin-left: 205px;
 }
+
+.cardLink{
+    color: inherit;
+    text-decoration: none;
+    outline: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.cardLinkActive{
+    color: inherit;
+    text-decoration: none;
+    outline: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    box-shadow: 5px 5px 5px rgba(7, 7, 7, 0.87);
+    border-radius: 10px;
+}
+

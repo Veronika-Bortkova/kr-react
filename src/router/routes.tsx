@@ -8,8 +8,8 @@ import MovieSearchdPage from "../pages/MovieSearchdPage.tsx";
 export const routes = createBrowserRouter([
     {path:"/", element:<MainLayout/>, children:[
             {index:true, element: <MoviesPage/>},
-            {path:"muvies_of_genere:genreId", element:<MoviesWithGenerPage/>},
-            {path: "muviesCard:movieId",element:<MovieCardPage/>},
-            {path:"muvies_of_search:search", element: <MovieSearchdPage/> }
+            {path:"movies_of_genere:genreId", element:<MoviesWithGenerPage/>},
+            {path: "moviesCard/:movieId",element:<MovieCardPage/>},
+            {path:"movies_of_search:search", element: <MovieSearchdPage/> }
         ] }
 ])

@@ -3,6 +3,8 @@ import type {IMoviesObj} from "../../models/MovieModel.ts";
 import {getAllMovies} from "../../services/api.service.ts";
 type movieSliceType ={
     moviesObj: IMoviesObj;
+    lastClickedMovieId: number|null
+
 }
 
 export const initMoviesSliceState:movieSliceType = {moviesObj:{
@@ -10,7 +12,9 @@ export const initMoviesSliceState:movieSliceType = {moviesObj:{
         results: [],
         total_pages: 0,
         total_results: 0
-    }};
+        },
+    lastClickedMovieId: null
+};
 
 const loadAllMovies = createAsyncThunk("loadAllMovies", async (pg:string, thunkAPI) => {
     const allMoviesObj = await getAllMovies(pg);
@@ -22,6 +26,9 @@ export const movieSlice = createSlice({
     reducers: {
         clearMoviesState: (state) => {
             state.moviesObj = initMoviesSliceState.moviesObj;
+        },
+        setLastClickedMovieId: (state, action: PayloadAction<number>) => {
+            state.lastClickedMovieId = action.payload;
         }
     },
     extraReducers: builder =>
