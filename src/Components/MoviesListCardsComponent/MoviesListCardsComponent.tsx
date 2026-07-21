@@ -7,6 +7,7 @@ import {NavLink} from "react-router-dom";
 import {useAppDispatch} from "../../redux/hooks/useAppDispatch.ts";
 import {useAppSelector} from "../../redux/hooks/useAppSelector.ts";
 import {movieActions} from "../../redux/slices/movieSlice.ts";
+import "./MoviesListCardsComponent.css"
 type PropsType = {
     movie: IMovie
 }

@@ -1,7 +1,7 @@
 
 import "./MoviesPage.css"
-import GenresComponent from "../../Components/GenresBadgesComponent/GenresBadgesComponent.tsx";
 import MoviesListComponent from "../../Components/MoviesListComponent/MoviesListComponent.tsx";
+import GenresBadgesComponent from "../../Components/GenresBadgesComponent/GenresBadgesComponent.tsx";
 
 
 
@@ -11,7 +11,7 @@ const MoviesPage = () => {
 
     return (
         <div className={"moviesPage"}>
-            <GenresComponent/>
+            <GenresBadgesComponent/>
             <MoviesListComponent/>
         </div>
     );

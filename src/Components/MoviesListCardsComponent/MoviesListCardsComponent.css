@@ -1,0 +1,68 @@
+.listCard{
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px rgba(7, 7, 7, 0.55);
+    transition: filter 0.1s ease, background 0.3s ease;
+}
+.listCard:hover{
+    filter: brightness(0.5);
+    background: rgba(0, 0, 0, 0.28);
+
+}
+.top_partCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+}
+.genreWrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+    width: 100%;
+    text-align: center;
+    color: rgba(63, 63, 63, 0.87);
+    font-size: 16px;
+}
+.stars{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+h2{
+    text-align: center;
+    margin: 0 5px;
+    font-size: 20px;
+}
+.cardLink{
+    color: inherit;
+    text-decoration: none;
+    outline: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.cardLinkActive{
+    color: inherit;
+    text-decoration: none;
+    outline: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    box-shadow: 5px 5px 5px rgba(7, 7, 7, 0.87);
+    border-radius: 10px;
+}

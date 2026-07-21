@@ -11,132 +11,114 @@
     gap: 15px;
     width: 100%;
 }
-.bageList{
+/*.badge{*/
+/*    width: 120px;*/
+/*    height: 25px;*/
+/*    background: #cef8ea;*/
+/*    border-radius: 5px;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    font-size: 16px;*/
+/*    font-weight: bold;*/
+/*}*/
 
-}
-.badge{
-    width: 120px;
-    height: 25px;
-    background: #cef8ea;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.moviesPage > :first-child {
-    flex-shrink: 0;
-}
+/*.moviesPage > :first-child {*/
+/*    flex-shrink: 0;*/
+/*}*/
 
 
-.moviesPage > :last-child {
-    flex-shrink: 0;
-    width: 1140px;
-}
-.divPoster{
-    width: 250px;
-    height: 379px;
-}
-.poster{
-    object-fit: cover;
-    width: 100%;
-    height: auto;
-    border-radius: 10px 10px 0 0;
-}
-.GridMovieList{
-    display: grid;
-    grid-template-columns: repeat(4, 270px);
-    gap: 20px;
-    margin: 0 auto;
-    width: 100%;
-    justify-content: center;
-    justify-items: center;
-}
-.listCard{
-    width: 250px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 10px;
-    box-shadow: 3px 3px 5px rgba(7, 7, 7, 0.55);
-    transition: filter 0.1s ease, background 0.3s ease;
-}
-.listCard:hover{
-    filter: brightness(0.5);
-    background: rgba(0, 0, 0, 0.28);
+/*.moviesPage > :last-child {*/
+/*    flex-shrink: 0;*/
+/*    width: 1140px;*/
+/*}*/
+/*.divPoster{*/
+/*    width: 250px;*/
+/*    height: 379px;*/
+/*}*/
+/*.poster{*/
+/*    object-fit: cover;*/
+/*    width: 100%;*/
+/*    height: auto;*/
+/*    border-radius: 10px 10px 0 0;*/
+/*}*/
+/*.GridMovieList{*/
+/*    display: grid;*/
+/*    grid-template-columns: repeat(4, 270px);*/
+/*    gap: 20px;*/
+/*    margin: 0 auto;*/
+/*    width: 100%;*/
+/*    justify-content: center;*/
+/*    justify-items: center;*/
+/*}*/
+/*.listCard{*/
+/*    width: 250px;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    justify-content: space-between;*/
+/*    align-items: center;*/
+/*    border-radius: 10px;*/
+/*    box-shadow: 3px 3px 5px rgba(7, 7, 7, 0.55);*/
+/*    transition: filter 0.1s ease, background 0.3s ease;*/
+/*}*/
+/*.listCard:hover{*/
+/*    filter: brightness(0.5);*/
+/*    background: rgba(0, 0, 0, 0.28);*/
 
-}
-.top_partCard{
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    gap: 5px;
+/*}*/
+/*.top_partCard{*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    justify-content: start;*/
+/*    align-items: center;*/
+/*    gap: 5px;*/
+/*}*/
 
-}
+/*.genreWrapper{*/
+/*    display: flex;*/
+/*    flex-wrap: wrap;*/
+/*    justify-content: center;*/
+/*    gap: 6px;*/
+/*    width: 100%;*/
+/*    text-align: center;*/
+/*    color: rgba(63, 63, 63, 0.87);*/
+/*    font-size: 16px;*/
+/*}*/
 
-.genreWrapper{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 6px;
-    width: 100%;
-    text-align: center;
-    color: rgba(63, 63, 63, 0.87);
-    font-size: 16px;
+/*.stars{*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    justify-content: end;*/
+/*}*/
+/*h2{*/
+/*    text-align: center;*/
+/*    margin: 0;*/
+/*    font-size: 20px;*/
+/*}*/
+/*.stars{*/
+/*    margin-bottom: 5px;*/
+/*    margin-top: 5px;*/
+/*}*/
 
-}
+/*.paginationBlock {*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    padding-bottom: 50px;*/
+/*    width: 1140px;*/
+/*    margin-left: 205px;*/
+/*}*/
 
-.stars{
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-}
-h2{
-    text-align: center;
-    margin: 0;
-    font-size: 20px;
-}
-.stars{
-    margin-bottom: 5px;
-    margin-top: 5px;
-}
+/*.cardLink{*/
+/*    color: inherit;*/
+/*    text-decoration: none;*/
+/*    outline: none;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    justify-content: space-between;*/
+/*    align-items: center;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*}*/
 
-.paginationBlock {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 50px;
-    width: 1140px;
-    margin-left: 205px;
-}
-
-.cardLink{
-    color: inherit;
-    text-decoration: none;
-    outline: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-}
-
-.cardLinkActive{
-    color: inherit;
-    text-decoration: none;
-    outline: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    box-shadow: 5px 5px 5px rgba(7, 7, 7, 0.87);
-    border-radius: 10px;
-}
 

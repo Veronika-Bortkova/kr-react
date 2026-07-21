@@ -1,5 +1,6 @@
 import type {IGenre} from "../../models/GenreModel.ts";
 import type {FC} from "react";
+import "./GenreBadgeComponent.css"
 
 type PropsType = {
     genre: IGenre;

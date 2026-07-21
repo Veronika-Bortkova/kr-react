@@ -4,5 +4,12 @@
     gap: 15px;
     font-weight: bold;
     cursor: pointer !important;
-
+}
+.paginationBlock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+    width: 1140px;
+    margin-left: 205px;
 }

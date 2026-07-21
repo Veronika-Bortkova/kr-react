@@ -2,6 +2,7 @@
 import {posterUrl} from "../../constants/urls.ts";
 import type {FC, SyntheticEvent} from "react";
 import defaultImage from "../../imeges/placeholder.jpg";
+import "./PosterPreviewComponent.css"
 type propsType = {
     poster_path:string | null
     size: string

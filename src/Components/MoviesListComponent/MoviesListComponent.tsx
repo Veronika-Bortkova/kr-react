@@ -4,6 +4,7 @@ import {useEffect} from "react";
 import {movieActions} from "../../redux/slices/movieSlice.ts";
 import MoviesListCardsComponent from "../MoviesListCardsComponent/MoviesListCardsComponent.tsx";
 import {useSearchParams} from "react-router-dom";
+import "./MoviesListComponent.css"
 
 
 
