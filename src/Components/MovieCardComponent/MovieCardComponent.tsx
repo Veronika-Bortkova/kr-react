@@ -1,12 +1,13 @@
 import "./MovieCardComponent.css"
 import PosterPreviewComponent from "../PosterPreviewComponent/PosterPreviewComponent.tsx";
 import StarsRatingComponent from "../StarsRatingComponent/StarsRatingComponent.tsx";
-import MovieInfoComponent from "../MovieInfoComponent/MovieInfoComponent.tsx";
+import MovieInfoHeaderComponent from "../MovieInfoHeaderComponent/MovieInfoHeaderComponent.tsx";
 import {useParams} from "react-router-dom";
 import {useAppSelector} from "../../redux/hooks/useAppSelector.ts";
 import {useAppDispatch} from "../../redux/hooks/useAppDispatch.ts";
 import {useEffect} from "react";
 import {movieActions} from "../../redux/slices/movieSlice.ts";
+import MovieInfoOverviewComponent from "../MovieInfoOverviewComponent/MovieInfoOverviewComponent.tsx";
 
 const MovieCardComponent = () => {
     const { movieId } = useParams();
@@ -24,10 +25,19 @@ const MovieCardComponent = () => {
     }
 
     return (
-        <div className={"MovieCard"}>
-            <PosterPreviewComponent poster_path={movie.backdrop_path} size={"w500"}/>
-            <StarsRatingComponent vote_average={movie.vote_average}/>
-            <MovieInfoComponent/>
+        <div className={"movieCard"}>
+            <div className={"topBlock"}>
+                <PosterPreviewComponent poster_path={movie.backdrop_path} size={"w500"}/>
+                <div className={"wrapperInfoWithStar"}>
+                    <MovieInfoHeaderComponent movie={movie}/>
+                    <div className={"wrapperStarCount"} >
+                        <StarsRatingComponent vote_average={movie.vote_average}/>
+                        <p className={"vote"}>{movie.vote_count} votes</p>
+                    </div>
+                </div>
+            </div>
+            <MovieInfoOverviewComponent movie={movie}/>
+
         </div>
     );
 };

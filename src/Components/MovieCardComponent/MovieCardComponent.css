@@ -1,12 +1,43 @@
 .moviesCardPage .divPoster {
-    width: 800px;        /* Увеличиваем ширину под горизонтальный формат */
-    height: auto;       /* Задаем высоту для сохранения пропорций ~16:9 */
-    border-radius: 12px; /* Красивые скругленные углы для баннера */
+    width: 700px;        /* Увеличиваем ширину под горизонтальный формат */
+    height: 393px;       /* Задаем высоту для сохранения пропорций ~16:9 */
+    border-radius: 10px; /* Красивые скругленные углы для баннера */
 }
 
 .moviesCardPage .poster {
-    width: 100%;
-    height: 100%;
+    width: 700px;        /* Увеличиваем ширину под горизонтальный формат */
+    height: 393px;
     object-fit: cover;   /* Картинка идеально заполнит новые размеры */
     border-radius: 10px;
+}
+
+.topBlock{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.stars-rating-wrapper{
+    font-size: 40px;
+}
+.wrapperStarCount{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 30px;
+}
+.vote{
+    font-weight: bold;
+    font-size: 25px;
+    white-space: nowrap;
+}
+.wrapperInfoWithStar{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 100px;
+    width: 100%;
 }

@@ -1,8 +1,9 @@
 import {useAppGeners} from "../../hooks/useAppGenres.ts";
 import type {FC} from "react";
 import "./GenreNameListComponent.css"
+import type {IGenre} from "../../models/GenreModel.ts";
 type propsType = {
-    genres: number[]
+    genres: number[] | IGenre[]
 }
 
 const GenreNameListComponent:FC<propsType> = ({genres}) => {
@@ -11,7 +12,14 @@ const GenreNameListComponent:FC<propsType> = ({genres}) => {
     return (
 
         <>
-            {genres.map(genreNumber => <span key={genreNumber}>{genresDictionary[genreNumber]}</span>)}
+            {genres.map((value) =>{
+                if (typeof value === "object" && value !==null){
+                    return <span key={value.id}>{value.name}</span>
+                }
+                return <span key={value}>{genresDictionary[value]}</span>
+                }
+            )}
+
 
         </>
     );

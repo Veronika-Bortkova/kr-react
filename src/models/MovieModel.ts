@@ -1,3 +1,5 @@
+import type {IGenre} from "./GenreModel.ts";
+
 export interface IMoviesObj {
 
     page: number;
@@ -23,5 +25,6 @@ export interface IMovie{
     video: boolean;
     vote_average: number;
     vote_count: number
+    genres?:IGenre[]
 }
 

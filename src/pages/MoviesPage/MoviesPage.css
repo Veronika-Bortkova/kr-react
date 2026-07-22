@@ -11,6 +11,11 @@
     gap: 15px;
     width: 100%;
 }
+.moviesPage .stars-rating-wrapper{
+    font-size: 24px;
+}
+
+
 /*.badge{*/
 /*    width: 120px;*/
 /*    height: 25px;*/

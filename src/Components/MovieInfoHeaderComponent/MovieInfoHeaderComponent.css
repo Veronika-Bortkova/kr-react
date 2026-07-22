@@ -1,0 +1,29 @@
+.wrapperMovieInfo{
+    width: 100%;
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+h1 {
+    text-align: center;
+    width: 100%;
+    display: block;
+    color: #414141;
+    white-space: nowrap;
+}
+.genresOfCard{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    color: #656565;
+    width: 100%;
+    text-align: center;
+    margin: -10px 0 25px 0;
+}
+
+.Release, .OriginalAudio, .Adult{
+    font-weight: bold;
+    font-size: 20px;
+}
