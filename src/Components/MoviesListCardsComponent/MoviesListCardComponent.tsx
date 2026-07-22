@@ -7,12 +7,12 @@ import {NavLink} from "react-router-dom";
 import {useAppDispatch} from "../../redux/hooks/useAppDispatch.ts";
 import {useAppSelector} from "../../redux/hooks/useAppSelector.ts";
 import {movieActions} from "../../redux/slices/movieSlice.ts";
-import "./MoviesListCardsComponent.css"
+import "./MoviesListCardComponent.css"
 type PropsType = {
     movie: IMovie
 }
 
-const MoviesListCardsComponent:FC<PropsType> = ({movie}) => {
+const MoviesListCardComponent:FC<PropsType> = ({movie}) => {
     const dispatch = useAppDispatch();
     const lastClickedId = useAppSelector(state => state.movieStoreSlice.lastClickedMovieId);
     const handleCardClick = () => {
@@ -37,4 +37,4 @@ const MoviesListCardsComponent:FC<PropsType> = ({movie}) => {
     );
 };
 
-export default MoviesListCardsComponent;
+export default MoviesListCardComponent;

@@ -2,9 +2,9 @@ import {useAppDispatch} from "../../redux/hooks/useAppDispatch.ts";
 import {useAppSelector} from "../../redux/hooks/useAppSelector.ts";
 import {useEffect} from "react";
 import {movieActions} from "../../redux/slices/movieSlice.ts";
-import MoviesListCardsComponent from "../MoviesListCardsComponent/MoviesListCardsComponent.tsx";
 import {useSearchParams} from "react-router-dom";
 import "./MoviesListComponent.css"
+import MoviesListCardComponent from "../MoviesListCardsComponent/MoviesListCardComponent.tsx";
 
 
 
@@ -19,7 +19,7 @@ const MoviesListComponent = () => {
     return (
 
         <div className={"GridMovieList"}>
-            {movies.map(movie => <MoviesListCardsComponent movie={movie} key={movie.id}/>)}
+            {movies.map(movie => <MoviesListCardComponent movie={movie} key={movie.id}/>)}
         </div>
     );
 };

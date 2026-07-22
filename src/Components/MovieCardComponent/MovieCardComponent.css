@@ -1,0 +1,12 @@
+.moviesCardPage .divPoster {
+    width: 800px;        /* Увеличиваем ширину под горизонтальный формат */
+    height: auto;       /* Задаем высоту для сохранения пропорций ~16:9 */
+    border-radius: 12px; /* Красивые скругленные углы для баннера */
+}
+
+.moviesCardPage .poster {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   /* Картинка идеально заполнит новые размеры */
+    border-radius: 10px;
+}
