@@ -11,11 +11,23 @@ import MoviesListCardComponent from "../MoviesListCardsComponent/MoviesListCardC
 const MoviesListComponent = () => {
     const dispatch = useAppDispatch();
     const movies = useAppSelector(state => state.movieStoreSlice.moviesObj.results);
+
+    const isLoading = useAppSelector(state => state.movieStoreSlice.isLoading);
+    const error = useAppSelector(state => state.movieStoreSlice.error);
+
     const [pgMovie] = useSearchParams();
     const currentPage = pgMovie.get("pg") ||"1";
+
     useEffect(() => {
         dispatch(movieActions.loadAllMovies(currentPage));
-    }, [currentPage]);
+    }, [currentPage, dispatch]);
+    if(error){
+        return <div className={"errorLoadingMovies"}>{error}</div>
+    }
+    if(isLoading){
+        return <div className={"loading"}>Loading movies..</div>
+    }
+
     return (
 
         <div className={"GridMovieList"}>

@@ -1,6 +1,7 @@
 import "./pagination.css"
 import {useSearchParams} from "react-router-dom";
 import * as ReactPaginateModule from 'react-paginate';
+import {useAppSelector} from "../../redux/hooks/useAppSelector.ts";
 const unknownModule = ReactPaginateModule as Record<string, unknown>;
 const innerModule = unknownModule.default && typeof unknownModule.default === 'object'
     ? (unknownModule.default as Record<string, unknown>)
@@ -8,8 +9,8 @@ const innerModule = unknownModule.default && typeof unknownModule.default === 'o
 const ReactPaginate = (innerModule.default || innerModule) as React.ComponentType<Record<string, unknown>>;
 
 
-
 const Pagination = () => {
+    const isLoading = useAppSelector(state => state.movieStoreSlice.isLoading);
     const [query, setQuery]  = useSearchParams({pg:"1"});
     const currentPageIndex = (Number(query.get("pg")) || 1) - 1;
     const totalPages = 500;
@@ -21,8 +22,7 @@ const Pagination = () => {
 
 
         return (
-
-            <div className="paginationBlock">
+            !isLoading && <div className="paginationBlock">
                 <ReactPaginate
                     pageCount={totalPages}
                     forcePage={currentPageIndex}
@@ -40,8 +40,11 @@ const Pagination = () => {
                     breakClassName={"page-item break"}
                     activeClassName={"activePage"}
                     disabledClassName={"disabled-button"}
-                    />
+                />
             </div>
+
+
+
         );
 };
 

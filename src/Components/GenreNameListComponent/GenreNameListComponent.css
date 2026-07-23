@@ -1,4 +1,7 @@
 span{
-    margin-right: 10px;
+    margin-right: 0px;
     font-weight: bold;
+    display: inline-block;
+    text-align: center;
+    flex-grow: 0;
 }
