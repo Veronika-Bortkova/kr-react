@@ -10,8 +10,8 @@ import MoviesListCardComponent from "../MoviesListCardsComponent/MoviesListCardC
 
 const MoviesListComponent = () => {
     const dispatch = useAppDispatch();
-    const movies = useAppSelector(state => state.movieStoreSlice.moviesObj.results);
-
+    const moviesObj = useAppSelector(state => state.movieStoreSlice.moviesObj);
+    const movies = moviesObj.results;
     const isLoading = useAppSelector(state => state.movieStoreSlice.isLoading);
     const error = useAppSelector(state => state.movieStoreSlice.error);
 
@@ -19,8 +19,11 @@ const MoviesListComponent = () => {
     const currentPage = pgMovie.get("pg") ||"1";
 
     useEffect(() => {
-        dispatch(movieActions.loadAllMovies(currentPage));
-    }, [currentPage, dispatch]);
+        const isCacheValid = moviesObj.page === Number(currentPage) && movies.length > 0;
+        if(!isCacheValid){
+            dispatch(movieActions.loadAllMovies(currentPage));
+        }
+    }, [currentPage, dispatch,moviesObj.page,movies.length]);
     if(error){
         return <div className={"errorLoadingMovies"}>{error}</div>
     }

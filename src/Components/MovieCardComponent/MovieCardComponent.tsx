@@ -6,21 +6,29 @@ import {useParams} from "react-router-dom";
 import {useAppSelector} from "../../redux/hooks/useAppSelector.ts";
 import {useAppDispatch} from "../../redux/hooks/useAppDispatch.ts";
 import {useEffect} from "react";
-import {movieActions} from "../../redux/slices/movieSlice.ts";
 import MovieInfoOverviewComponent from "../MovieInfoOverviewComponent/MovieInfoOverviewComponent.tsx";
+import {movieCardActions} from "../../redux/slices/movieCardSlice.ts";
 
 const MovieCardComponent = () => {
     const { movieId } = useParams();
     const movies = useAppSelector(state => state.movieStoreSlice.moviesObj.results);
-    const downloadedMovie = useAppSelector(state =>state.movieStoreSlice.movieObj);
+    console.log(movies);
+    const downloadedMovie = useAppSelector(state =>state.movieCardStoreSlice.movieObj);
     const dispatch = useAppDispatch();
+    const isLoading = useAppSelector(state => state.movieCardStoreSlice.isLoading);
+    const error = useAppSelector(state => state.movieCardStoreSlice.error);
+
    const movie = (movieId ? movies.find(m => m.id === +movieId) : undefined) || downloadedMovie;
     useEffect(() => {
         if (movieId && !movie){
-            dispatch(movieActions.loadMovieById(movieId))
+            dispatch(movieCardActions.loadMovieById(movieId));
+            console.log(movies);
         }
-    }, [movieId, movie, dispatch]);
-    if (!movie) {
+    }, [movieId, movie, dispatch, movies]);
+    if (error){
+        return <div>{error}</div>;
+    }
+    if (isLoading || !movie) {
         return <div>Loading movie details...</div>;
     }
 

@@ -6,17 +6,17 @@ import PosterPreviewComponent from "../PosterPreviewComponent/PosterPreviewCompo
 import {NavLink} from "react-router-dom";
 import {useAppDispatch} from "../../redux/hooks/useAppDispatch.ts";
 import {useAppSelector} from "../../redux/hooks/useAppSelector.ts";
-import {movieActions} from "../../redux/slices/movieSlice.ts";
 import "./MoviesListCardComponent.css"
+import {movieCardActions} from "../../redux/slices/movieCardSlice.ts";
 type PropsType = {
     movie: IMovie
 }
 
 const MoviesListCardComponent:FC<PropsType> = ({movie}) => {
     const dispatch = useAppDispatch();
-    const lastClickedId = useAppSelector(state => state.movieStoreSlice.lastClickedMovieId);
+    const lastClickedId = useAppSelector(state => state.movieCardStoreSlice.lastClickedMovieId);
     const handleCardClick = () => {
-        dispatch(movieActions.setLastClickedMovieId(movie.id));
+        dispatch(movieCardActions.setLastClickedMovieId(movie.id));
     };
     return (
 
